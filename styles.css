@@ -1,0 +1,523 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-bg: #ffffff;
+  --color-dark: #2a254b;
+  --color-dark-soft: #4a446d;
+  --color-gray: #726e8d;
+  --color-gray-light: #f7f7f7;
+  --color-border: #d9d7e5;
+  --color-border-light: #e8e6f1;
+  --fs-h1: 40px;
+  --fs-h2: 32px;
+  --fs-h3: 20px;
+  --fs-body: 16px;
+  --fs-small: 14px;
+  --lh: 1.5;
+  --max-width: 1200px;
+  --section-padding: 80px;
+  --radius: 4px;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--color-bg);
+  color: var(--color-dark);
+  font-family: system-ui, sans-serif;
+  font-size: var(--fs-body);
+  line-height: var(--lh);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover,
+button:hover {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.btn {
+  padding: 14px 28px;
+  background: var(--color-dark);
+  border: 1px solid var(--color-dark);
+  color: #fff;
+  border-radius: var(--radius);
+  font-size: var(--fs-body);
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.btn:hover { opacity: 0.9; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+header {
+  background: #fff;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.header-top {
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-icon img,
+.header-actions img {
+  width: 20px;
+  height: 20px;
+}
+
+.header-actions {
+  display: flex;
+  gap: 18px;
+}
+
+.header-nav {
+  border-top: 1px solid var(--color-border-light);
+}
+
+.header-nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+  padding: 16px 0;
+}
+
+.header-nav a {
+  font-size: var(--fs-small);
+  color: var(--color-gray);
+}
+
+main section {
+  padding: var(--section-padding) 40px;
+}
+
+main section > h2 {
+  font-size: var(--fs-h2);
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+#hero {
+  background: var(--color-dark);
+  color: #fff;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.hero-content {
+  display: flex;
+  gap: 60px;
+}
+
+#hero .text-block {
+  max-width: 460px;
+}
+
+#hero h1 {
+  font-size: var(--fs-h1);
+  margin-bottom: 24px;
+}
+
+#hero p {
+  margin-top: 24px;
+  font-size: var(--fs-body);
+  color: #d9d6f2;
+}
+
+#hero .btn {
+  background: #fff;
+  color: var(--color-dark);
+  border-color: #fff;
+}
+
+#hero .image-block img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#features {
+  background: #ffffff;
+}
+
+#features .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.feature-card {
+  background: none;
+  border: none;
+  padding: 0;
+  text-align: left;
+}
+
+.feature-card img {
+  width: 32px;
+}
+
+.feature-card h3 {
+  font-size: var(--fs-h3);
+  margin-bottom: 8px;
+}
+
+.feature-card p {
+  font-size: var(--fs-small);
+  color: var(--color-gray);
+}
+
+.products-grid {
+  display: grid;
+  gap: 28px;
+}
+
+#new-ceramics .products-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+#popular-products .products-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.product-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+.product-card h3 {
+  margin: 16px 0 6px;
+  font-size: var(--fs-h3);
+}
+
+.product-card p {
+  color: var(--color-gray);
+}
+
+#new-ceramics > .btn,
+#popular-products > .btn {
+  margin: 40px auto 0;
+  background: transparent;
+  color: var(--color-dark);
+  border-color: var(--color-border);
+}
+
+#newsletter {
+  background: var(--color-gray-light);
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+#newsletter p {
+  max-width: 520px;
+  margin: 0 auto 24px;
+  color: var(--color-gray);
+}
+
+.newsletter-form {
+  display: inline-flex;
+  align-items: stretch;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.newsletter-form input {
+  padding: 14px 16px;
+  border: none;
+  outline: none;
+  min-width: 240px;
+}
+
+.newsletter-form .btn {
+  border-radius: 0px;
+  margin-top: 0px;
+}
+
+#story {
+  background: #ffffff;
+}
+
+#story .story-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+#story .text-block {
+  padding: 0;
+  background: none;
+}
+
+#story h2 {
+  margin-bottom: 20px;
+}
+
+#story p {
+  color: var(--color-gray);
+  margin-bottom: 16px;
+}
+
+#story .btn {
+  background: transparent;
+  color: var(--color-dark);
+  border: 1px solid var(--color-border);
+}
+
+#story .image-block img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+footer {
+  background: var(--color-dark);
+  color: #ffffff;
+  padding-top: 60px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 48px;
+  padding: 0 0 40px;
+}
+
+footer h3 {
+  font-size: var(--fs-h3);
+  margin-bottom: 16px;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer li + li {
+  margin-top: 8px;
+}
+
+footer a {
+  font-size: var(--fs-small);
+  opacity: 0.85;
+}
+
+footer a:hover {
+  opacity: 1;
+}
+
+footer .newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: none;
+  border: none;
+}
+
+footer input[type="email"] {
+  padding: 10px 12px;
+  border-radius: var(--radius);
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+}
+
+footer input::placeholder {
+  color: #ddd;
+}
+
+footer .newsletter-form .btn {
+  background: #fff;
+  color: var(--color-dark);
+}
+
+.footer-bottom {
+  border-top: 1px solid #3b3758;
+  margin: 0 auto;
+  max-width: var(--max-width);
+  width: 100%;
+  padding: 18px 0 22px;
+  text-align: left;
+  font-size: var(--fs-small);
+  color: #d6d4e4;
+}
+
+#newsletter-email {
+  margin-top: 3px;
+}
+
+section > .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+}
+
+@media (max-width: 1024px) {
+  main section {
+    padding: 60px 30px;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  #features .container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  #new-ceramics .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #popular-products .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #story .story-content {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  header .header-top {
+    padding: 20px;
+  }
+
+  .header-nav ul {
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 12px 20px;
+  }
+
+  main section {
+    padding: 50px 20px;
+  }
+
+  #features .container {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  #new-ceramics .products-grid,
+  #popular-products .products-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .product-card img {
+    height: 260px;
+    object-fit: cover;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    padding: 0;
+    border-radius: var(--radius);
+    border: none;
+    gap: 12px;
+  }
+
+  .newsletter-form input {
+    width: 100%;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+  }
+
+  .newsletter-form .btn {
+    width: 100%;
+    border-radius: var(--radius);
+  }
+
+  #story .story-content {
+    gap: 28px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-inline: 20px;
+  }
+
+  .footer-bottom {
+    padding-inline: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  #hero h1 {
+    font-size: 32px;
+  }
+
+  #hero .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  main section {
+    padding: 40px 16px;
+  }
+
+  .product-card img {
+    height: 220px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  #new-ceramics > .btn,
+  #popular-products > .btn {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  footer input[type="email"] {
+    width: 100%;
+  }
+
+  footer .newsletter-form .btn {
+    width: 100%;
+  }
+}
