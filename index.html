@@ -28,13 +28,11 @@
 
   <nav class="header__nav">
     <ul class="header__nav-list">
-      <li class="header__nav-item"><a class="header__nav-link" href="#">Plant pots</a></li>
-      <li class="header__nav-item"><a class="header__nav-link" href="#">Ceramics</a></li>
-      <li class="header__nav-item"><a class="header__nav-link" href="#">Tables</a></li>
-      <li class="header__nav-item"><a class="header__nav-link" href="#">Chairs</a></li>
-      <li class="header__nav-item"><a class="header__nav-link" href="#">Crockery</a></li>
-      <li class="header__nav-item"><a class="header__nav-link" href="#">Tableware</a></li>
-      <li class="header__nav-item"><a class="header__nav-link" href="#">Cutlery</a></li>
+      <li class="header__nav-item"><a class="header__nav-link" href="#our-values">Our values</a></li>
+      <li class="header__nav-item"><a class="header__nav-link" href="#collection">New ceramics</a></li>
+      <li class="header__nav-item"><a class="header__nav-link" href="#popular-products">Popular products</a></li>
+      <li class="header__nav-item"><a class="header__nav-link" href="#our-club">Our club</a></li>
+      <li class="header__nav-item"><a class="header__nav-link" href="#about-us">About us</a></li>
     </ul>
   </nav>
 </header>
@@ -48,7 +46,7 @@
       <div class="hero__text">
         <div>
           <h1 class="hero__title">The furniture brand for the future, with timeless designs</h1>
-          <a href="#" class="hero__btn btn">View collection</a>
+          <a href="#collection" class="hero__btn btn">View collection</a>
         </div>
 
         <p class="hero__description">
@@ -66,7 +64,7 @@
   </section>
 
   <!-- FEATURES -->
-  <section class="features">
+  <section class="features" id="our-values">
     <h2 class="features__title-main">What makes our brand different</h2>
 
     <div class="container grid features__grid">
@@ -99,7 +97,7 @@
   </section>
 
   <!-- NEW CERAMICS -->
-  <section class="products products--new">
+  <section class="products products--new" id="collection">
     <h2 class="products__title">New ceramics</h2>
 
     <div class="container grid products__grid">
@@ -130,11 +128,11 @@
 
     </div>
 
-    <a href="#" class="products__btn btn">View collection</a>
+    <a href="#collection" class="products__btn btn">View collection</a>
   </section>
 
   <!-- POPULAR PRODUCTS -->
-  <section class="products products--popular">
+  <section class="products products--popular" id="popular-products">
     <h2 class="products__title">Our popular products</h2>
 
     <div class="container grid products__grid">
@@ -159,11 +157,11 @@
 
     </div>
 
-    <a href="#" class="products__btn btn">View collection</a>
+    <a href="#collection" class="products__btn btn">View collection</a>
   </section>
 
   <!-- NEWSLETTER -->
-  <section class="newsletter">
+  <section class="newsletter" id="our-club">
     <h2 class="newsletter__title">Join the club and get the benefits</h2>
 
     <p class="newsletter__description">
@@ -173,20 +171,13 @@
 
     <form class="newsletter__form" action="#" method="post">
       <label class="visually-hidden" for="newsletter-email">Email address</label>
-
-      <input class="newsletter__email"
-             type="email"
-             id="newsletter-email"
-             name="email"
-             placeholder="your@email.com"
-             required>
-
+      <input class="newsletter__email" type="email" id="newsletter-email" name="email" placeholder="your@email.com" required>
       <button type="submit" class="newsletter__btn btn">Sign up</button>
     </form>
   </section>
 
   <!-- STORY -->
-  <section class="story">
+  <section class="story" id="about-us">
     <div class="container story__content">
 
       <div class="story__text">
@@ -224,7 +215,7 @@
     <div class="footer__col">
       <h3 class="footer__title">Menu</h3>
       <ul class="footer__list">
-        <li><a class="footer__link" href="#">New arrivals</a></li>
+        <li><a class="footer__link" href="#collection">New arrivals</a></li>
         <li><a class="footer__link" href="#">Best sellers</a></li>
         <li><a class="footer__link" href="#">Recently viewed</a></li>
         <li><a class="footer__link" href="#">Popular this week</a></li>
@@ -247,11 +238,9 @@
     <div class="footer__col">
       <h3 class="footer__title">Our company</h3>
       <ul class="footer__list">
-        <li><a class="footer__link" href="#">About us</a></li>
-        <li><a class="footer__link" href="#">Vacancies</a></li>
-        <li><a class="footer__link" href="#">Contact us</a></li>
-        <li><a class="footer__link" href="#">Privacy</a></li>
-        <li><a class="footer__link" href="#">Returns policy</a></li>
+        <li><a class="footer__link" href="#about-us">About us</a></li>
+        <li><a class="footer__link" href="#our-values">Our values</a></li>
+        <li><a class="footer__link" href="#our-club">Our club</a></li>
       </ul>
     </div>
 
@@ -260,14 +249,7 @@
 
       <form class="footer__form" action="#" method="post">
         <label class="footer__label" for="footer-email">Email address</label>
-
-        <input class="footer__input"
-               type="email"
-               id="footer-email"
-               name="email"
-               placeholder="your@email.com"
-               required>
-
+        <input class="footer__input" type="email" id="footer-email" name="email" placeholder="your@email.com" required>
         <button type="submit" class="footer__btn btn">Sign up</button>
       </form>
     </div>
