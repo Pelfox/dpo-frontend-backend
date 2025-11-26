@@ -217,6 +217,10 @@ header {
 }
 
 .products__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
   margin: 40px auto 0;
   background: transparent;
   color: var(--color-dark);
