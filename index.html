@@ -7,15 +7,22 @@
   <meta name="description" content="Eco-friendly, modern furniture for every home.">
   <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
   <link rel="stylesheet" href="./styles.css">
-  <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
 <header class="header">
   <div class="container header__top">
-    <div class="header__icon">
-      <a href="#"><img src="./assets/icons/search.png" alt="Search"></a>
+    <div class="header__controls">
+      <button class="header__burger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="header__icon">
+        <a href="#"><img src="./assets/icons/search.png" alt="Search"></a>
+      </div>
     </div>
 
     <span class="header__logo">Avion</span>
@@ -26,7 +33,7 @@
     </div>
   </div>
 
-  <nav class="header__nav">
+  <nav class="header__nav" id="primary-navigation">
     <ul class="header__nav-list">
       <li class="header__nav-item"><a class="header__nav-link" href="#our-values">Our values</a></li>
       <li class="header__nav-item"><a class="header__nav-link" href="#collection">New ceramics</a></li>
@@ -261,6 +268,51 @@
   </div>
 
 </footer>
+
+<button class="to-top" type="button" aria-label="Go to top">To top</button>
+
+<script>
+  (function() {
+    const burger = document.querySelector('.header__burger');
+    const nav = document.querySelector('.header__nav');
+    const toTop = document.querySelector('.to-top');
+
+    if (!burger || !nav) {
+      return;
+    }
+
+    burger.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('header__nav--open');
+      burger.classList.toggle('header__burger--open', isOpen);
+      burger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    nav.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('header__nav--open');
+        burger.classList.remove('header__burger--open');
+        burger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    if (toTop) {
+      const toggleToTop = () => {
+        if (window.scrollY > 200) {
+          toTop.classList.add('to-top--visible');
+        } else {
+          toTop.classList.remove('to-top--visible');
+        }
+      };
+
+      toggleToTop();
+      window.addEventListener('scroll', toggleToTop);
+
+      toTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+  })();
+</script>
 
 </body>
 </html>
